@@ -473,7 +473,8 @@ public class TerraFlutterPlugin implements FlutterPlugin, MethodCallHandler, Act
 
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
-    channel.setMethodCallHandler(null);
+    channel = null;
+    binaryMessenger = null;
   }
 
 }
